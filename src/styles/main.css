@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&display=swap');
+ * {
+	 box-sizing: border-box;
+}
+ body {
+	 font-family: 'Nunito', sans-serif;
+	 margin: 0;
+	 padding: 0;
+}
+ body .skip-link {
+	 position: absolute;
+	 top: -40px;
+	 left: 0;
+	 background-color: #bf1722;
+	 color: white;
+	 padding: 8px;
+	 z-index: 100;
+}
+ body .skip-link:focus {
+	 top: 0;
+}
+ nav {
+	 padding: 15px;
+}
+ ul {
+	 margin: 0;
+	 padding: 0;
+	 list-style-type: none;
+}
+ ul a {
+	 margin-left: 20px;
+	 color: white;
+	 text-decoration: none;
+	 font-size: 22px;
+}
+ main {
+	 min-height: 100vh;
+}
+ main header {
+	 display: flex;
+	 flex-direction: row-reverse;
+	 justify-content: space-between;
+	 background-color: #cc080b;
+	 color: white;
+	 padding: 0 15px;
+}
+ main header button {
+	 color: white;
+	 font-size: 44px;
+}
+ main button {
+	 background: none;
+	 border: none;
+}
+ main .container .content {
+	 padding: 0 15px;
+}
+ main .container .cards {
+	 display: grid;
+	 grid-template-columns: repeat(2, 1fr);
+	 justify-content: center;
+}
+ main .container .card {
+	 border: 1px solid #e0e0e0;
+	 padding: 5px;
+	 border-radius: 8px;
+	 margin: 5px;
+	 color: black;
+	 text-decoration: none;
+}
+ main .container .card img {
+	 border-radius: 8px 8px 0 0;
+}
+ main .container img {
+	 width: 100%;
+}
+ main img.hero {
+	 width: 100%;
+	 height: auto;
+}
+
+.detail{
+	padding: 15px;
+}
+.detail img{
+	border-radius: 16px;
+}
+.detail p{
+	text-align: justify;
+	font-size: 14px;
+}
+.detail span{
+	background-color: #f1ac18;
+	padding: 0 12px;
+	border-radius: 8px;
+	color: white;
+}
+.detail section{
+	margin-top: 100px;
+}
+.menu{
+	padding: 15px;
+	border-radius: 8px;
+	background-color: #f1ac18;
+}
+.menu h4{
+	background-color: white;
+	padding: 0 15px;
+	border-radius: 6px;
+	width: 50%;
+}
+.review div{
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+	border: 0.3px solid rgb(227, 227, 227);
+	border-radius: 16px;
+}
+.review q{
+	font-style: italic;
+}
+
+ #drawer {
+	 width: 250px;
+	 height: 100%;
+	 position: absolute;
+	 transform: translate(-250px, 0);
+	 transition: transform 0.3s ease-in-out;
+	 background-color: #f1ac18;
+}
+ #drawer.open {
+	 transform: translate(0, 0);
+}
+ footer {
+	 background-color: #f5f5f5;
+	 margin-top: 80px;
+	 min-height: 50px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ @media screen and (min-width: 700px) {
+	 #drawer {
+		 width: 450px;
+		 height: 100%;
+		 position: absolute;
+		 transform: translate(-450px, 0);
+		 transition: transform 0.3s ease-in-out;
+		 background-color: #f1ac18;
+	}
+	 #drawer.open {
+		 transform: translate(0, 0);
+	}
+}
+ @media screen and (min-width: 900px) {
+	 nav {
+		 padding: 0 15px;
+	}
+	 ul {
+		 margin: 0;
+		 padding: 0;
+		 list-style-type: none;
+	}
+	 ul a {
+		 margin-left: 20px;
+		 color: white;
+		 text-decoration: none;
+	}
+	 main {
+		 min-height: 100vh;
+	}
+	 main header {
+		 display: none;
+	}
+	 main button {
+		 background: none;
+		 border: none;
+	}
+	 main .container .content {
+		 padding: 0 150px;
+	}
+	 main .container .cards {
+		 display: grid;
+		 grid-template-columns: repeat(4, 1fr);
+		 justify-content: center;
+	}
+	 main .container .card {
+		 border: 1px solid #e0e0e0;
+		 padding: 5px;
+		 border-radius: 8px;
+		 margin: 5px;
+	}
+	 main .container img {
+		 width: 100%;
+	}
+	 main img.hero {
+		 width: 100%;
+		 height: 300px;
+		 object-fit: cover;
+	}
+	.detail{
+		padding: 15px 150px;
+	}
+	.detail .menu{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	 #drawer {
+		 width: 100%;
+		 height: 100%;
+		 position: static;
+		 transform: none;
+		 transition: none;
+		 background-color: #cc080b;
+		 display: flex;
+		 justify-content: space-between;
+	}
+	 #drawer h3 {
+		 color: #f1ac18;
+	}
+	 #drawer ul {
+		 display: flex;
+		 align-items: center;
+	}
+	 #drawer.open {
+		 transform: none;
+	}
+	 footer {
+		 background-color: #f5f5f5;
+		 min-height: 50px;
+		 display: flex;
+		 align-items: center;
+		 justify-content: center;
+	}
+}
+ @media screen and (min-width: 900px) {
+	 .hero {
+		 min-width: 1000px;
+	}
+}
+ 

@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "bootstrap-icons": "^1.8.1",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "serviceworker-webpack-plugin": "^1.0.1"
   }
 }

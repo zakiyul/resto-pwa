@@ -1,13 +1,13 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 
-import data from '../DATA.json';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 const humbergerBtn = document.getElementById('humberger');
 const drawerElement = document.getElementById('drawer');
 const mainElement = document.querySelector('.container');
-const cardsElement = document.querySelector('.cards');
+
 
 let cards = '';
 const app = new App({
@@ -22,27 +22,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 })
-
-
-const cardElement = (restaurant) => {
-  return `
-    <a href="#" class="card">
-      <img src="${restaurant.pictureId}" alt="${restaurant.name}" />
-      <div>
-        <strong>${restaurant.name}</strong>
-        <div>
-          <small>Rating: ${restaurant.rating}</small>
-          <br/>
-          <small>City: ${restaurant.city}</small>
-        </div>
-      </div>
-    </a>
-  `
-}
-
-data.restaurants.map(restaurant => {
-  cards += cardElement(restaurant)
-});
-
-cardsElement.innerHTML = cards;

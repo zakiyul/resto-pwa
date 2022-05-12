@@ -121,7 +121,7 @@
 	cursor: pointer;
 	background-color: gainsboro;
 	color: white;
-	padding: 10px;
+	padding: 20px 10px;
 	margin: 10px 0;
 	border-radius: 0 8px 8px 0;
 }
@@ -237,6 +237,9 @@
 	 #drawer ul {
 		 display: flex;
 		 align-items: center;
+	}
+	#drawer a{
+		padding: 12px 0;
 	}
 	 #drawer.open {
 		 transform: none;

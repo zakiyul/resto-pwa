@@ -38,28 +38,28 @@ const createRestoDetailTemplate = (resto) => `
         <section class="review">
             <h4 style="text-align: center">Customer Review</h4>
             ${resto.customerReviews.map((review) => (
-                `
+    `
                 <div>
                     <strong>${review.name}</strong> <br>
                     <q>${review.review}</q><br>
                     <small>${review.date}</small>
                 </div>
                 `
-            )).join(' ')}
+  )).join(' ')}
         </section>
 `;
 
 const createLikeButtonTemplate = () => `
-        <button id='favBtn' class="unfav">add to favorite</button>
+        <button tabindex="-1" id='favBtn' class="unfav">add to favorite</button>
 `;
 
 const createLikedButtonTemplate = () => `
-        <button id='favBtn' class="fav">add to favorite</button>
+        <button tabindex="-1" id='favBtn' class="fav">add to favorite</button>
 `;
 
 export {
-    createRestoListTemplate,
-    createRestoDetailTemplate,
-    createLikeButtonTemplate,
-    createLikedButtonTemplate
+  createRestoListTemplate,
+  createRestoDetailTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 };

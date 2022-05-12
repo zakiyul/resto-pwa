@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import FavoriteRestoIdb from '../../data/favresto-idb';
 import { createRestoListTemplate } from '../templates/template-creator';
 
@@ -17,6 +16,7 @@ const Favorite = {
   async afterRender() {
     const restos = await FavoriteRestoIdb.getAllResto();
     const restoContainer = document.querySelector('.cards');
+    // eslint-disable-next-line array-callback-return
     restos.map((resto) => {
       restoContainer.innerHTML += createRestoListTemplate(resto);
     });

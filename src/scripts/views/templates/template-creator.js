@@ -47,6 +47,19 @@ const createRestoDetailTemplate = (resto) => `
                 `
             )).join(' ')}
         </section>
-`
+`;
 
-export { createRestoListTemplate, createRestoDetailTemplate };
+const createLikeButtonTemplate = () => `
+        <button id='favBtn' class="unfav">add to favorite</button>
+`;
+
+const createLikedButtonTemplate = () => `
+        <button id='favBtn' class="fav">add to favorite</button>
+`;
+
+export {
+    createRestoListTemplate,
+    createRestoDetailTemplate,
+    createLikeButtonTemplate,
+    createLikedButtonTemplate
+};

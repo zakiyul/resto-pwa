@@ -109,6 +109,22 @@
 	border-radius: 6px;
 	width: 50%;
 }
+.fav{
+	cursor: pointer;
+	background-color: #bf1722;
+	color: white;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 0 8px 8px 0;
+}
+.unfav{
+	cursor: pointer;
+	background-color: gainsboro;
+	color: white;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 0 8px 8px 0;
+}
 .review div{
 	padding: 5px;
 	margin: 5px;

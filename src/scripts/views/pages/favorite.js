@@ -4,7 +4,7 @@ import { createRestoListTemplate } from '../templates/template-creator';
 const Favorite = {
   async render() {
     return `
-        <div id="maincontent" class="content">
+        <div class="content">
             <h3>Favorite Resto to Berbuka</h3>
             <div class="cards">
 

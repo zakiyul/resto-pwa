@@ -5,7 +5,7 @@ const HomePage = {
   async render() {
     return `
             <img class="hero" src="./images/heros/hero-image_2.jpg" alt="gambar makanan di meja">
-            <div id="maincontent" class="content">
+            <div class="content">
                 <h3>Find Your Place to Berbuka</h3>
                 <div class="cards">
 

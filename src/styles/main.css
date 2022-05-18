@@ -91,8 +91,10 @@
 	font-size: 22px;
 	margin-right: 15px;
 }
-#humberger a{
-	text-decoration: none;
+#humberger button{
+	background: none;
+	border: none;
+	font-size: 44px;
 	color: white;
 }
 .detail{
@@ -159,6 +161,9 @@
 	 transform: translate(-250px, 0);
 	 transition: transform 0.3s ease-in-out;
 	 background-color: #f1ac18;
+}
+#drawer a{
+	font-size: 35px;
 }
  #drawer.open {
 	 transform: translate(0, 0);

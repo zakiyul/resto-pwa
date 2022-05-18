@@ -9,6 +9,10 @@
     }
     .desktop h3{
         color: white;
+        font-size: 44px;
+    }
+    .desktop a{
+        font-size: 35px;
     }
     .desktop ul{
         display: flex;

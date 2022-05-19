@@ -1,8 +1,10 @@
 import CONFIG from '../../global/config';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createRestoListTemplate = (resto) => `
     <a href="${`/#/detail/${resto.id}`}" class="card">
-        <img src="${CONFIG.BASE_IMAGE_URL(resto.pictureId)}" alt="${resto.name}" />
+        <img class="lazyload" loading="lazy" width="400" height="auto" data-src="${CONFIG.BASE_IMAGE_URL(resto.pictureId)}" alt="${resto.name}" src="https://i.ibb.co/Ksm6zCB/image-loader.gif" />
         <div>
             <strong>${resto.name}</strong>
             <div>
@@ -15,7 +17,10 @@ const createRestoListTemplate = (resto) => `
 `;
 
 const createRestoDetailTemplate = (resto) => `
-        <img src="${CONFIG.BASE_IMAGE_URL(resto.pictureId)}" alt="${resto.name}">
+        <picture>
+            <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SM(resto.pictureId)}" >
+            <img src="${CONFIG.BASE_IMAGE_URL(resto.pictureId)}" alt="${resto.name}">
+        </picture>
         <h2>${resto.name}</h2>
         <span>
             ${resto.address}, ${resto.city}
@@ -49,17 +54,17 @@ const createRestoDetailTemplate = (resto) => `
         </section>
 `;
 
-const createLikeButtonTemplate = () => `
+const createLikeRestoButtonTemplate = () => `
         <button id='favBtn' class="unfav" aria-label="like this resto">add to favorite</button>
 `;
 
-const createLikedButtonTemplate = () => `
+const createUnlikeRestoButtonTemplate = () => `
         <button style="padding: 24px 0" id='favBtn' class="fav" aria-label="unlike this resto">remove from favorite</button>
 `;
 
 export {
   createRestoListTemplate,
   createRestoDetailTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createLikeRestoButtonTemplate,
+  createUnlikeRestoButtonTemplate,
 };

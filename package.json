@@ -7,7 +7,8 @@
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "npx eslint ./src",
-    "test": "karma start"
+    "test": "karma start",
+    "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",
@@ -16,12 +17,15 @@
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.1.0",
+    "codeceptjs": "^3.3.3",
     "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^3.6.0",
     "eslint": "^8.15.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "html-webpack-plugin": "^4.5.2",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^3.99.1",
     "karma": "^5.2.3",
@@ -31,9 +35,11 @@
     "karma-sourcemap-loader": "^0.3.8",
     "karma-webpack": "^4.0.2",
     "node-sass": "^6.0.1",
+    "puppeteer": "^14.1.1",
     "sass-loader": "^10.2.1",
     "style-loader": "^1.2.1",
     "webpack": "^4.46.0",
+    "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.3",
     "webpack-merge": "^5.8.0",
@@ -42,6 +48,7 @@
   "dependencies": {
     "bootstrap-icons": "^1.8.1",
     "idb": "^7.0.1",
+    "lazysizes": "^5.3.2",
     "regenerator-runtime": "^0.13.9",
     "serviceworker-webpack-plugin": "^1.0.1"
   }

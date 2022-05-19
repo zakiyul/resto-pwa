@@ -50,11 +50,11 @@ const createRestoDetailTemplate = (resto) => `
 `;
 
 const createLikeButtonTemplate = () => `
-        <button id='favBtn' class="unfav">add to favorite</button>
+        <button id='favBtn' class="unfav" aria-label="like this resto">add to favorite</button>
 `;
 
 const createLikedButtonTemplate = () => `
-        <button style="padding: 24px 0" id='favBtn' class="fav">remove from favorite</button>
+        <button style="padding: 24px 0" id='favBtn' class="fav" aria-label="unlike this resto">remove from favorite</button>
 `;
 
 export {
